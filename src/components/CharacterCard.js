@@ -1,17 +1,17 @@
-import snape from "../images/snape.jpg"
-function CharacterCard() {
-
+// import snape from "../images/snape.jpg";
+import { Link } from "react-router-dom";
+function CharacterCard(props) {
     return (
+        <Link to={`/user/${props.oneWizard.id}`}>
+            <img
+                className="card-picture"
+                src={props.oneWizard.image}
+                title={props.oneWizard.name}
+                alt={props.oneWizard.name} />
+            <h4 className="name">Nombre: {props.oneWizard.name} ({props.oneWizard.house})</h4>
 
-        <a href="#/user/473cad77-5d41-45ac-a925-e0dbe1d3e417" >
-            <img src={snape} title="" alt="Severus Snape" />
-            <h4 className="name">Nombre: Severus Snape (Slytherin)</h4>
-
-            <p className="race">Humano mestizo</p>
-
-
-        </a>
-    )
-
-
-} export default CharacterCard;
+            <p className="race">{props.oneWizard.species}</p>
+        </Link>
+    );
+}
+export default CharacterCard;

@@ -7,33 +7,46 @@ import Filters from "./Filters";
 import CharacterList from "./CharacterList";
 
 const App = () => {
-  const [wizard, setWizard] = useState([]);
+  const [wizards, setWizards] = useState([]);
   const [searchWizard, setSearchWizard] = useState("");
-  const [searchbyHouse, setSearchByHouse] = useState("");
-
+  const [searchByHouse, setSearchByHouse] = useState("Gryffindor");
+  //Llamada al Fetch que debe estar sordo...
   useEffect(() => {
     callToApi().then((wizardsData) => {
-      setWizard(wizardsData);
+      setWizards(wizardsData);
     });
   }, []);
+  ;
   //Función que maneja los inputs
   const handleInput = (data) => {
-    if (data.key === "name") {
+    if (data.key === 'name') {
       setSearchWizard(data.value);
-    } else if (data.key === "house") {
+    } else if (data.key === 'house') {
       setSearchByHouse(data.value);
     }
   };
 
-
+  const filteredWizards = wizards
+    .filter((oneWizard) => {
+      return oneWizard.name.toLowerCase().includes(searchWizard.toLowerCase());
+    })
+    .filter((oneWizard) => {
+      return searchByHouse === "all"
+        ? true
+        : oneWizard.house === searchByHouse;
+    });
 
   return (
     <>
       <h1> Listado de personajes de la saga de Hary Potter</h1>
-      <Filters handleInput={handleInput} />
+      <Filters
+        handleInput={handleInput}
+        wizards={wizards}
+        searchByHouse={searchByHouse}
+        searchWizard={searchWizard}
+        filteredWizards={filteredWizards}
+      />
       <CharacterList />
-
-
     </>
   );
 };

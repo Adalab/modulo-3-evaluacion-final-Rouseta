@@ -8,8 +8,8 @@ function Filters(props) {
 
         <section className="inputs">
             <form action="" className="inputs-boxes">
-                <FilterName handleInput={props.handleInput} />
-                <FilterHouse handleInput={props.handleInput} />
+                <FilterName handleInput={props.handleInput} searchWizard={props.searchWizard} />
+                <FilterHouse handleInput={props.handleInput} searchByHouse={props.searchbyHouse} />
 
 
             </form>

@@ -16,6 +16,7 @@ function FilterName(props) {
                 className="inputs-boxes_name"
                 name="name"
                 id="name"
+                value={props.searchWizard}
                 onChange={handleName}
             />
         </>

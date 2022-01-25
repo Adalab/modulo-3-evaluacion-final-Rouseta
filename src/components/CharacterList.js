@@ -1,24 +1,21 @@
-import snape from "../images/snape.jpg"
 import CharacterCard from "./CharacterCard";
 
-function CharacterList() {
-
-
-
+function CharacterList(props) {
+    const wizardElement = props.wizards.map((oneWizard) => {
+        return (
+            <li key={oneWizard.id} className="result-card">
+                <CharacterCard oneWizard={oneWizard} />
+            </li>
+        );
+    });
+    console.log(wizardElement);
 
     return (
-
         <section className="results">
             <ul className="result-cards">
-                <li className="result-card">
-                    <CharacterCard />
-
-                </li>
+                {wizardElement}
             </ul>
         </section>
-    )
-
-
-
+    );
 }
 export default CharacterList;

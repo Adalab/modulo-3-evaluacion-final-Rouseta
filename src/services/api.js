@@ -11,12 +11,13 @@ const callToApi = () => {
                     image: wizard.image,
                     house: wizard.house,
                     gender: wizard.gender,
-                    specie: wizard.specie,
+                    specie: wizard.species,
                     id: `${wizard.name} ${wizard.dateOfBirth}`,
                 };
-            });
+            }); console.log(cleanData);
             return cleanData;
         });
+
 };
 
 export default callToApi;
