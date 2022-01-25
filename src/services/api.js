@@ -1,4 +1,5 @@
 // Fichero src/services/api.js
+import { v4 as uuidv4 } from 'uuid';
 const callToApi = () => {
     // Llamamos al API
     return fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
@@ -12,9 +13,9 @@ const callToApi = () => {
                     house: wizard.house,
                     gender: wizard.gender,
                     specie: wizard.species,
-                    id: `${wizard.name} ${wizard.dateOfBirth}`,
+                    id: uuidv4(),
                 };
-            }); console.log(cleanData);
+            });
             return cleanData;
         });
 

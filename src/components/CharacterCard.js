@@ -5,10 +5,10 @@ function CharacterCard(props) {
         <Link to={`/user/${props.oneWizard.id}`}>
             <img
                 className="card-picture"
-                src={props.oneWizard.image}
+                src={props.oneWizard.image} //poner foto alternativa
                 title={props.oneWizard.name}
                 alt={props.oneWizard.name} />
-            <h4 className="name">Nombre: {props.oneWizard.name} ({props.oneWizard.house})</h4>
+            <h4 className="name">Nombre: {props.oneWizard.name} de la casa de ({props.oneWizard.house})</h4>
 
             <p className="race">{props.oneWizard.species}</p>
         </Link>

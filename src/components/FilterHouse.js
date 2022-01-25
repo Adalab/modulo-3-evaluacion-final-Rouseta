@@ -1,7 +1,7 @@
 function FilterHouse(props) {
     const handleHouse = (event) => {
         props.handleInput({
-            key: "house",
+            key: 'house',
             value: event.currentTarget.value,
         });
     };
