@@ -1,51 +1,39 @@
-// import '../styles/App.scss';
-
-import snape from '../images/snape.jpg'
+import "../styles/App.scss";
 
 import { Route, Switch } from "react-router-dom";
+import callToApi from "../services/api";
+import { useState, useEffect } from "react";
+import Filters from "./Filters";
+import CharacterList from "./CharacterList";
 
 const App = () => {
+  const [wizard, setWizard] = useState([]);
+  const [searchWizard, setSearchWizard] = useState("");
+  const [searchbyHouse, setSearchByHouse] = useState("");
+
+  useEffect(() => {
+    callToApi().then((wizardsData) => {
+      setWizard(wizardsData);
+    });
+  }, []);
+  //Función que maneja los inputs
+  const handleInput = (data) => {
+    if (data.key === "name") {
+      setSearchWizard(data.value);
+    } else if (data.key === "house") {
+      setSearchByHouse(data.value);
+    }
+  };
+
+
+
   return (
     <>
-      <header>
-        <h1> Listado de personajes de la saga de Hary Potter</h1>
-      </header>
-      <section className="inputs">
-        <form action="" className="inputs-boxes">
-          <label htmlFor="name" className="label-input_name">
-            Busca por nombre
-          </label>
-          <input
-            type="text"
-            className="inputs-boxes_name"
-            name="name"
-            id="name"
-          />
-          <label htmlFor="houses" className="label-input_name">
-            Busca por una de las cuatro casa de Hogwarts
-          </label>
-          <select name="houses" id="houses" className="input-boxes-name">
-            <option value="all">Todas las casas</option>
-            <option value="Gryffindor">Gryffindor</option>
-            <option value="Huffelpuff">Huffelpuff</option>
-            <option value="Ravenclaw">Ravenclaw</option>
-            <option value="Slytherin">Slytherin</option>
-          </select>
-        </form>
+      <h1> Listado de personajes de la saga de Hary Potter</h1>
+      <Filters handleInput={handleInput} />
+      <CharacterList />
 
-      </section>
-      <section className="results">
-        <ul className="result-cards">
-          <li className="reult-card">
-            <h4 className="name">Nombre: Severus Snape (Slytherin)</h4>
 
-            <h4 className="race">Humano mestizo</h4>
-            <img src={snape} title="" alt="Severus Snape" />
-
-          </li>
-
-        </ul>
-      </section>
     </>
   );
 };
