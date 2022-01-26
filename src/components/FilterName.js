@@ -3,9 +3,9 @@ function FilterName(props) {
         props.handleInput({
             key: 'name',
             value: event.currentTarget.value,
-        })
+        });
 
-    }
+    };
     return (
         <>
             <label htmlFor="name" className="label-input">
@@ -14,6 +14,7 @@ function FilterName(props) {
             <input
                 type="text"
                 className="inputs-boxes_name"
+                type="text"
                 name="name"
                 id="name"
                 value={props.searchWizard}

@@ -38,7 +38,9 @@ const App = () => {
 
   return (
     <>
-      <h1> Listado de personajes de la saga de Hary Potter</h1>
+      <header>
+        <h1> Listado de personajes de la saga de Hary Potter</h1>
+      </header>
       <Filters
         handleInput={handleInput}
         wizards={wizards}
@@ -46,7 +48,8 @@ const App = () => {
         searchWizard={searchWizard}
         filteredWizards={filteredWizards}
       />
-      <CharacterList />
+      <CharacterList wizards={filteredWizards} />
+      <footer>&copy; Rouseta 2021</footer>
     </>
   );
 };
