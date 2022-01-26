@@ -8,7 +8,7 @@ function CharacterList(props) {
             </li>
         );
     });
-    console.log(wizardElement);
+
 
     return (
         <section className="results">

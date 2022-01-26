@@ -5,6 +5,7 @@ import callToApi from "../services/api";
 import { useState, useEffect } from "react";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
+import CharacterDetail from "./CharacterDetail"
 
 const App = () => {
   const [wizards, setWizards] = useState([]);
@@ -31,24 +32,37 @@ const App = () => {
       return oneWizard.name.toLowerCase().includes(searchWizard.toLowerCase());
     })
     .filter((oneWizard) => {
-      return searchByHouse === "all"
-        ? true
-        : oneWizard.house === searchByHouse;
+      return oneWizard.house === searchByHouse;
     });
+
+  const renderWizardDetail = (props) => {
+    const routeId = props.match.params.wizardId;
+    const foundWizard = wizards.find((wizard) => wizard.id === routeId);
+    return <CharacterDetail wizard={foundWizard} />
+
+  }
 
   return (
     <>
       <header>
         <h1> Listado de personajes de la saga de Hary Potter</h1>
       </header>
-      <Filters
-        handleInput={handleInput}
-        wizards={wizards}
-        searchByHouse={searchByHouse}
-        searchWizard={searchWizard}
-        filteredWizards={filteredWizards}
-      />
-      <CharacterList wizards={filteredWizards} />
+      <Switch>
+        <Route path="/" exact>
+          <div>
+            <Filters
+              handleInput={handleInput}
+              wizards={wizards}
+              searchByHouse={searchByHouse}
+              searchWizard={searchWizard}
+              filteredWizards={filteredWizards}
+            />
+            <CharacterList wizards={filteredWizards} />
+          </div>
+        </Route >
+        <Route path="/wizard/:wizardId" render={renderWizardDetail} />
+
+      </Switch>
       <footer>&copy; Rouseta 2021</footer>
     </>
   );
