@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail"
+import Footer from "./Footer";
+import Header from "./Header";
 
 const App = () => {
   const [wizards, setWizards] = useState([]);
@@ -45,9 +47,7 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <h1> Listado de personajes de la saga de Hary Potter</h1>
-      </header>
+      <Header />
       <Switch>
         <Route path="/" exact>
           <div>
@@ -64,7 +64,8 @@ const App = () => {
         <Route path="/wizard/:wizardId" render={renderWizardDetail} />
 
       </Switch>
-      <footer>&copy; Rouseta 2021</footer>
+      <Footer />
+
     </>
   );
 };

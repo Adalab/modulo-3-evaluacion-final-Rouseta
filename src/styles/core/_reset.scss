@@ -1,0 +1,11 @@
+//Reset styles
+
+@font-face {
+  font-family: "HARRYP";
+  src: url("../../fonts/HARRYP.ttf") format("truetype");
+}
+* {
+  font-family: "HARRYP", sans-serif;
+  box-sizing: border-box;
+  font-weight: large;
+}

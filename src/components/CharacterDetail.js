@@ -28,7 +28,7 @@ function CharacterDetail(props) {
     console.log(props);
     return (
 
-        <section>
+        <section className='result_details'>
             <Link to="/"> Volver al inicio</Link>
             <h2>Detalle del mago o maga</h2>
             <img

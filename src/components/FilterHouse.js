@@ -1,4 +1,7 @@
+import "../styles/components/FilterHouse.scss"
+
 function FilterHouse(props) {
+
     const handleHouse = (event) => {
         props.handleInput({
             key: 'house',
