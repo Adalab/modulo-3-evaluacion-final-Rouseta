@@ -2,7 +2,20 @@ import CharacterCard from "./CharacterCard";
 import Error from "./Error";
 
 function CharacterList(props) {
-    const wizardElement = props.wizards.map((oneWizard) => {
+
+    const wizardSort = props.wizards
+    wizardSort.sort((a, b) => {
+        if (a.name > b.name) {
+            return 1
+        } if (a.name < b.name) {
+            return -1
+        }
+    })
+
+
+
+
+    const wizardElement = wizardSort.map((oneWizard) => {
 
         return (
             <li key={oneWizard.id} className="result-card">

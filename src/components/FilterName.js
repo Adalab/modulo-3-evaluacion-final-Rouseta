@@ -11,6 +11,7 @@ function FilterName(props) {
     };
     return (
         <>
+
             <label htmlFor="name" className="label-input">
                 Busca por nombre
             </label>
