@@ -1,5 +1,4 @@
 import "../styles/App.scss";
-
 import { Route, Switch } from "react-router-dom";
 import callToApi from "../services/api";
 import { useState, useEffect } from "react";
@@ -8,6 +7,7 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail"
 import Footer from "./Footer";
 import Header from "./Header";
+import ls from "../services/localStorage"
 
 const App = () => {
   const [wizards, setWizards] = useState([]);
