@@ -5,7 +5,7 @@ function CharacterCard(props) {
 
 
     return (
-        <Link to={`/wizard/${props.oneWizard.id}`}>
+        <Link className="link-card" to={`/wizard/${props.oneWizard.id}`}>
             <img
                 className="card-picture"
                 src={props.oneWizard.image || dementor}

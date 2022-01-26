@@ -2,3 +2,13 @@
   height: 250px;
   width: 250px;
 }
+.name {
+  color: #6c5c07;
+  transition: color ease 0.8s;
+  &:hover {
+    color: wheat;
+  }
+}
+.link-card {
+  text-decoration: none;
+}

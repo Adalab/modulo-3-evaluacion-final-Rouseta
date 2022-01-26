@@ -8,7 +8,7 @@ function Header() {
         <header>
             <div className="header-title" >
                 <a className="header-title" href="https://fontmeme.com/es/fuente-de-harry-potter/"><img src="https://fontmeme.com/permalink/220126/e0902987da096e05aee9d2f27b8628e4.png" alt="fuente-de-harry-potter" border="0" /></a>
-                <h1 className="header-title__sub">Busca aquí a tu mago o muggle favorito</h1>
+                <h1 className="header-title__sub">Busca aquí a tu mago/a o muggle favorito/a</h1>
             </div>
         </header>
     )
