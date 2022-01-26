@@ -1,4 +1,4 @@
-import "../styles/components/FilterHouse.scss"
+import "../styles/components/FilterName.scss"
 function FilterName(props) {
     const handleName = (event) => {
         event.preventDefault()

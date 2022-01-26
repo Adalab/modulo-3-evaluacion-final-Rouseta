@@ -14,7 +14,7 @@ function FilterHouse(props) {
             <label htmlFor="houses" className="label-input">
                 Busca por una de las cuatro casa de Hogwarts
             </label>
-            <select
+            <select className="select-house"
                 name="houses"
                 id="houses"
                 className="input-boxes-name"

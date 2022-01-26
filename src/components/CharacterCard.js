@@ -1,5 +1,6 @@
 import dementor from "../images/dementor.jpg";
 import { Link } from "react-router-dom";
+import "../styles/components/CharacterCard.scss"
 function CharacterCard(props) {
 
 

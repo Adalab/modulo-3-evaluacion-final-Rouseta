@@ -1,5 +1,6 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse"
+import "../styles/components/Filters.scss"
 
 function Filters(props) {
 
