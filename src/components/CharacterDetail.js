@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import dementor from "../images/dementor.jpg";
+import "../styles/components/CharacterDetails.scss";
+
 
 function CharacterDetail(props) {
     const getSpecie = () => {
@@ -15,43 +17,36 @@ function CharacterDetail(props) {
     };
 
     const deadOrAlive = () => {
-        return props.wizard.status === true ? "Vivo/a" : "Muerto/a"
-
-    }
+        return props.wizard.status === true ? "Vivo/a" : "Muerto/a";
+    };
 
     const getGender = () => {
-        return props.wizard.gender === "female" ? "Mujer" : "Hombre"
-    }
-
-
+        return props.wizard.gender === "female" ? "Mujer" : "Hombre";
+    };
 
     console.log(props);
     return (
-
-        <section className='result_details'>
-            <Link to="/"> Volver al inicio</Link>
+        <section className="result_details">
+            <div className="link-back">
+                <Link to="/"> Volver al inicio</Link>
+            </div>
             <h2>Detalle del mago o maga</h2>
             <img
                 className="card__img"
                 src={props.wizard.image || dementor}
                 alt={`Foto de ${props.wizard.name}`}
                 title={`Foto de ${props.wizard.name}`}
-
             />
             <h4 className="card_title">{props.wizard.name}</h4>
-
-            <p className="card_status">{props.wizard.alive}{deadOrAlive()} </p>
+            <p className="card_status">
+                {props.wizard.alive}
+                {deadOrAlive()}{" "}
+            </p>
             <p className="card_specie">{getSpecie()}</p>
             <p className="card gender"></p> {getGender()}
             <p className="card_house">{props.wizard.house}</p>
             <p className="card_alternate">{props.wizard.alternate}</p>
-
-
-
-
         </section>
-
-
-    )
-
-} export default CharacterDetail;
+    );
+}
+export default CharacterDetail;

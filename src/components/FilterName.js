@@ -1,17 +1,15 @@
-import "../styles/components/FilterName.scss"
+import "../styles/components/FilterName.scss";
 function FilterName(props) {
     const handleName = (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
         props.handleInput({
-            key: 'name',
+            key: "name",
             value: event.currentTarget.value,
         });
-
     };
     return (
         <>
-
             <label htmlFor="name" className="label-input">
                 Busca por nombre
             </label>

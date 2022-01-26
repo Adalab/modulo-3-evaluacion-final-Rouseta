@@ -4,7 +4,7 @@ import callToApi from "../services/api";
 import { useState, useEffect } from "react";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
-import CharacterDetail from "./CharacterDetail"
+import CharacterDetail from "./CharacterDetail";
 import Footer from "./Footer";
 import Header from "./Header";
 // import ls from"../services/localStorage"
@@ -19,13 +19,11 @@ const App = () => {
       setWizards(wizardsData);
     });
   }, [searchByHouse]);
-  ;
   //Función que maneja los inputs
   const handleInput = (data) => {
-    if (data.key === 'name') {
+    if (data.key === "name") {
       setSearchWizard(data.value);
-
-    } else if (data.key === 'house') {
+    } else if (data.key === "house") {
       setSearchByHouse(data.value);
     }
   };
@@ -41,9 +39,8 @@ const App = () => {
   const renderWizardDetail = (props) => {
     const routeId = props.match.params.wizardId;
     const foundWizard = wizards.find((wizard) => wizard.id === routeId);
-    return <CharacterDetail wizard={foundWizard} />
-
-  }
+    return <CharacterDetail wizard={foundWizard} />;
+  };
 
   return (
     <>
@@ -60,12 +57,10 @@ const App = () => {
             />
             <CharacterList wizards={filteredWizards} />
           </div>
-        </Route >
+        </Route>
         <Route path="/wizard/:wizardId" render={renderWizardDetail} />
-
       </Switch>
       <Footer />
-
     </>
   );
 };

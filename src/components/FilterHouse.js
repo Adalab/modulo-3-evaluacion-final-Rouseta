@@ -1,10 +1,9 @@
-import "../styles/components/FilterHouse.scss"
+import "../styles/components/FilterHouse.scss";
 
 function FilterHouse(props) {
-
     const handleHouse = (event) => {
         props.handleInput({
-            key: 'house',
+            key: "house",
             value: event.currentTarget.value,
         });
     };
@@ -14,14 +13,14 @@ function FilterHouse(props) {
             <label htmlFor="houses" className="label-input">
                 Busca por una de las cuatro casa de Hogwarts
             </label>
-            <select className="select-house"
+            <select
+                className="select-house"
                 name="houses"
                 id="houses"
                 className="input-boxes-name"
                 onChange={handleHouse}
                 value={props.searchbyHouse}
             >
-
                 <option value="Gryffindor">Gryffindor</option>
                 <option value="Hufflepuff">Hufflepuff</option>
                 <option value="Ravenclaw">Ravenclaw</option>
