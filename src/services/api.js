@@ -1,8 +1,8 @@
 // Fichero src/services/api.js
 import { v4 as uuidv4 } from 'uuid';
-const callToApi = () => {
+const callToApi = (searchByHouse) => {
     // Llamamos al API
-    return fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
+    return fetch(`http://hp-api.herokuapp.com/api/characters/house/${searchByHouse}`)
         .then((response) => response.json())
         .then((data) => {
             const cleanData = data.map((wizard) => {

@@ -10,12 +10,12 @@ const App = () => {
   const [wizards, setWizards] = useState([]);
   const [searchWizard, setSearchWizard] = useState("");
   const [searchByHouse, setSearchByHouse] = useState("Gryffindor");
-  //Llamada al Fetch que debe estar sordo...
+  //Llamada al Fetch
   useEffect(() => {
-    callToApi().then((wizardsData) => {
+    callToApi(searchByHouse).then((wizardsData) => {
       setWizards(wizardsData);
     });
-  }, []);
+  }, [searchByHouse]);
   ;
   //Función que maneja los inputs
   const handleInput = (data) => {
