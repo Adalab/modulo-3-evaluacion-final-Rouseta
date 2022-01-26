@@ -1,5 +1,7 @@
 function FilterName(props) {
     const handleName = (event) => {
+        event.preventDefault()
+
         props.handleInput({
             key: 'name',
             value: event.currentTarget.value,

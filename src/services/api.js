@@ -13,6 +13,7 @@ const callToApi = (searchByHouse) => {
                     house: wizard.house,
                     gender: wizard.gender,
                     specie: wizard.species,
+                    alternate: wizard.alternate_names,
                     id: uuidv4(),
                 };
             });

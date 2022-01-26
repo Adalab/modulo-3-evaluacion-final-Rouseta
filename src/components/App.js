@@ -22,6 +22,7 @@ const App = () => {
   const handleInput = (data) => {
     if (data.key === 'name') {
       setSearchWizard(data.value);
+
     } else if (data.key === 'house') {
       setSearchByHouse(data.value);
     }

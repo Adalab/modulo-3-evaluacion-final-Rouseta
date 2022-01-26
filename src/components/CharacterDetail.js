@@ -44,6 +44,7 @@ function CharacterDetail(props) {
             <p className="card_specie">{getSpecie()}</p>
             <p className="card gender"></p> {getGender()}
             <p className="card_house">{props.wizard.house}</p>
+            <p className="card_alternate">{props.wizard.alternate}</p>
 
 
 
