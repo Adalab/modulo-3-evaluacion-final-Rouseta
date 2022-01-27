@@ -3,6 +3,7 @@ import dementor from "../images/dementor.jpg";
 import "../styles/components/CharacterDetails.scss";
 
 
+
 function CharacterDetail(props) {
     const getSpecie = () => {
         if (props.wizard.specie === "human") {
@@ -28,7 +29,7 @@ function CharacterDetail(props) {
     return (
         <section className="result_details">
             <div className="link-back">
-                <Link to="/"> Volver al inicio</Link>
+                <Link className="link" to="/"> Volver al inicio</Link>
             </div>
             <h2 className="subtitle"> Detalle del mago o maga</h2>
             <img
@@ -40,16 +41,16 @@ function CharacterDetail(props) {
 
             <h4 className="card_title">{props.wizard.name}</h4>
             <section className="card_details">
-                <p className="card_status">
+                <p className="card_status"><i className="fas fa-heartbeat"></i>
                     {props.wizard.alive}
                     {deadOrAlive()}
                 </p>
-                <p className="card_specie">{getSpecie()}</p>
-                <p className="card_gender"></p> {getGender()}
-                <p className="card_house">{props.wizard.house}</p>
+                <p className="card_specie"><i className="fas fa-pastafarianism"></i>{getSpecie()}</p>
+                <p className="card_gender"><i className="fas fa-venus-mars"></i> {getGender()}</p>
+                <p className="card_house"><i className="fab fa-fort-awesome-alt"></i>{props.wizard.house}</p>
                 <p className="card_alternate">{props.wizard.alternate}</p>
             </section>
-        </section>
+        </section >
     );
 }
 export default CharacterDetail;

@@ -7,6 +7,7 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Footer from "./Footer";
 import Header from "./Header";
+
 // import ls from"../services/localStorage"
 
 const App = () => {

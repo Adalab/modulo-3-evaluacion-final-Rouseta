@@ -24,7 +24,15 @@
   font-size: 40px;
 }
 .card_details {
+  display: flex;
+  flex-direction: column;
   padding-top: 0;
   margin-top: -50px;
   margin-bottom: 20px;
+}
+.fas {
+  color: #6c5c07;
+}
+.fab {
+  color: #6c5c07;
 }
