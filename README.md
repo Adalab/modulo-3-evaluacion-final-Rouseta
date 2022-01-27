@@ -37,7 +37,7 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 - Género.
 - Especie.
 - Nombres alternativos si los tiene.
-  Para realizar esta parte del ejercicio hemos trabajado con la gestión del Router de react a través de la librería de React **React Router Dom**
+  Para realizar esta parte del ejercicio hemos trabajado con la gestión del Router de react a través de la librería de React **React Router Dom**.
 
 5.  Detalles a tener en cuenta
 
@@ -65,6 +65,7 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 9. BONUS: Más filtros  
    Añadir, por ejemplo, un filtro de género.
 10. BONUS:Botón de reset
+
     Con el que la página vuelva a su listado principal.
 
 ## Herramientas y programas
