@@ -71,7 +71,7 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 ## Herramientas y programas
 
 El ejercicio se ha realizado a través del editor de código fuente **Visual Studio Code**
-Hemos instalado los paquete de react de Node Package Manzger:
+Hemos instalado los paquete de react de Node Package Manager:
 
 - **React Router Dom** libreria para gestionar las rutas en un una Single-Page App.
 
