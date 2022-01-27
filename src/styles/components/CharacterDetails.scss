@@ -22,6 +22,7 @@
 }
 .subtitle {
   font-size: 40px;
+  color: #6c5c07;
 }
 .card_details {
   display: flex;
@@ -30,9 +31,15 @@
   margin-top: -50px;
   margin-bottom: 20px;
 }
+
 .fas {
   color: #6c5c07;
+  margin-right: 10px;
 }
 .fab {
+  color: #6c5c07;
+  margin-right: 10px;
+}
+a {
   color: #6c5c07;
 }
