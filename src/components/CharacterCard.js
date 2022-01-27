@@ -1,4 +1,4 @@
-import dementor from "../images/dementor.jpg";
+import hp from "../images/HPGafas.jpg";
 import { Link } from "react-router-dom";
 import "../styles/components/CharacterCard.scss";
 function CharacterCard(props) {
@@ -6,7 +6,7 @@ function CharacterCard(props) {
         <Link className="link-card" to={`/wizard/${props.oneWizard.id}`}>
             <img
                 className="card-picture"
-                src={props.oneWizard.image || dementor}
+                src={props.oneWizard.image || hp}
                 title={props.oneWizard.name}
                 alt={props.oneWizard.name}
             />

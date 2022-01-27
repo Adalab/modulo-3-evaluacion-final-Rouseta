@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import dementor from "../images/dementor.jpg";
+import hp from "../images/HPGafas.jpg";
 import "../styles/components/CharacterDetails.scss";
 
 
@@ -24,17 +24,17 @@ function CharacterDetail(props) {
     const getGender = () => {
         return props.wizard.gender === "female" ? "Mujer" : "Hombre";
     };
+    //No me ha dado tiempo, pero de haberlo tenido habría puesto aquí los ifs, para que me saliera el enblema de cada casa, en su lugar he puesto iconos genéricos, pero es algo que mejoraré.
 
-    console.log(props);
     return (
         <section className="result_details">
             <div className="link-back">
-                <Link className="link" to="/"> Volver al inicio</Link>
+                <Link to="/"> Volver al inicio</Link>
             </div>
             <h2 className="subtitle"> Detalle del mago o maga</h2>
             <img
                 className="card__img"
-                src={props.wizard.image || dementor}
+                src={props.wizard.image || hp}
                 alt={`Foto de ${props.wizard.name}`}
                 title={`Foto de ${props.wizard.name}`}
             />
