@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const callToApi = (searchByHouse) => {
     // Llamamos al API
     return fetch(
-        `http://hp-api.herokuapp.com/api/characters/house/${searchByHouse}`
+        `https://hp-api.herokuapp.com/api/characters/house/${searchByHouse}`
     )
         .then((response) => response.json())
         .then((data) => {
