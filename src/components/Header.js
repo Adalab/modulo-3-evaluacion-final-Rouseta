@@ -14,7 +14,7 @@ function Header() {
                         border="0"
                     />
                 </a>
-                {/* <h1 className="header-title__sub">Busca aquí a tu mago/a o muggle favorito/a</h1> */}
+
             </div>
         </header>
     );

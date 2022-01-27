@@ -30,22 +30,25 @@ function CharacterDetail(props) {
             <div className="link-back">
                 <Link to="/"> Volver al inicio</Link>
             </div>
-            <h2>Detalle del mago o maga</h2>
+            <h2 className="subtitle"> Detalle del mago o maga</h2>
             <img
                 className="card__img"
                 src={props.wizard.image || dementor}
                 alt={`Foto de ${props.wizard.name}`}
                 title={`Foto de ${props.wizard.name}`}
             />
+
             <h4 className="card_title">{props.wizard.name}</h4>
-            <p className="card_status">
-                {props.wizard.alive}
-                {deadOrAlive()}{" "}
-            </p>
-            <p className="card_specie">{getSpecie()}</p>
-            <p className="card gender"></p> {getGender()}
-            <p className="card_house">{props.wizard.house}</p>
-            <p className="card_alternate">{props.wizard.alternate}</p>
+            <section className="card_details">
+                <p className="card_status">
+                    {props.wizard.alive}
+                    {deadOrAlive()}
+                </p>
+                <p className="card_specie">{getSpecie()}</p>
+                <p className="card_gender"></p> {getGender()}
+                <p className="card_house">{props.wizard.house}</p>
+                <p className="card_alternate">{props.wizard.alternate}</p>
+            </section>
         </section>
     );
 }

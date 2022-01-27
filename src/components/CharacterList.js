@@ -1,3 +1,4 @@
+import "../styles/components/CharacterList.scss";
 import CharacterCard from "./CharacterCard";
 import Error from "./Error";
 
