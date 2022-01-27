@@ -22,7 +22,7 @@ Crear una **página de búsqueda de personajes de la saga de Harry Potter** usan
 Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 
 3.  Crear componentes  
-    Como estamos trabajando con react, se Ppde que trabajemos mínimo con los siguientes componentes:
+    Como estamos trabajando con react, se pide que trabajemos mínimo con los siguientes componentes:
 
 - Componente para el filtro de nombre.
 - Componente para el listado.
@@ -64,7 +64,7 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
    Ordenar el listado alfabéticamente.
 9. BONUS: Más filtros  
    Añadir, por ejemplo, un filtro de género.
-10. BONUS:Botón de reset
+10. BONUS: Botón de reset
 
     Con el que la página vuelva a su listado principal.
 
@@ -73,7 +73,7 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 El ejercicio se ha realizado a través del editor de código fuente **Visual Studio Code**
 Hemos instalado los paquete de react de Node Package Manager:
 
-- **React Router Dom** libreria para gestionar las rutas en un una Single-Page App.
+- **React Router Dom** librería para gestionar las rutas en un una Single-Page App.
 
 - **React uuid** para generar ids necesarias para crear rutas dinámicas.
 
