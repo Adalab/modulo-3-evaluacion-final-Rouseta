@@ -12,7 +12,7 @@ Crear una **página de búsqueda de personajes de la saga de Harry Potter** usan
   Es importante que si algunos personajes no tienen imagen que usemos una imagen alternativa.
   En este caso hemos usado el Hook de **React** **useEffect** para llevar los datos desde el fichero api en la carpeta de servicios al fichero principal App.
 
-2. Filtrado de personajes
+2. Filtrado de personajes  
    Se ha de poder buscar a los personajes por dos vías:
 
 - Por **nombre**: para ello hemos de crear un **input de tipo text** para que el usuario o usuaria introduzcan los datos de búsqueda
