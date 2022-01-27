@@ -72,9 +72,9 @@ Por defecto, al cargar la página ha de aparecer la casa Gryffindor.
 El ejercicio se ha realizado a través del editor de código fuente **Visual Studio Code**
 Hemos instalado los paquete de react de Node Package Manzger:
 
-- React Router Dom libreria para gestionar las rutas en un una Single-Page App.
+- **React Router Dom** libreria para gestionar las rutas en un una Single-Page App.
 
-- React uuid para generar ids necesarias para crear rutas dinámicas.
+- **React uuid** para generar ids necesarias para crear rutas dinámicas.
 
 ## Timing
 
