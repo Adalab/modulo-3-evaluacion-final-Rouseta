@@ -11,7 +11,7 @@ function Filters(props) {
             <form action="" className="inputs-boxes">
                 <FilterName handleInput={props.handleInput} searchWizard={props.searchWizard} />
                 <FilterHouse handleInput={props.handleInput} searchByHouse={props.searchbyHouse} />
-                <FilterGender handleInput={props.handleInput} /> searchByGender ={props.searchByGender}
+                <FilterGender handleInput={props.handleInput} searchByGender={props.searchByGender} />
 
 
             </form>

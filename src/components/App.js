@@ -10,7 +10,7 @@ import CharacterDetail from "./CharacterDetail"
 const App = () => {
   const [wizards, setWizards] = useState([]);
   const [searchWizard, setSearchWizard] = useState("");
-  const [searchByHouse, setSearchByHouse] = useState("Gryffindor");
+  const [searchByHouse, setSearchByHouse] = useState("Slytherin");
   const [searchByGender, setSearchByGender] = useState("all")
   //Llamada al Fetch
   useEffect(() => {

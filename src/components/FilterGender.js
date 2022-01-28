@@ -2,7 +2,7 @@ function FilterGender(props) {
     const handleGender = (event) => {
         props.handleInput({
             key: "gender",
-            value: event.currenTarget.value
+            value: event.currentTarget.value
         })
 
 
