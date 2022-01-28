@@ -14,6 +14,7 @@ function FilterGender(props) {
                 Busca por género
             </label>
             <select
+                type="text"
                 name="gender"
                 id="gender"
                 className="input-boxes-name"

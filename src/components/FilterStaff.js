@@ -12,8 +12,8 @@ function FilterStaff(props) {
             <input
                 type="checkbox"
                 name="staff"
-                checked={props.searchStaff}>
-                onChange={handleStaff}
+                checked={props.searchStaff}
+                onChange={handleStaff}>
 
             </input>
         </label>
