@@ -11,6 +11,7 @@ const App = () => {
   const [wizards, setWizards] = useState([]);
   const [searchWizard, setSearchWizard] = useState("");
   const [searchByHouse, setSearchByHouse] = useState("Gryffindor");
+  const [searchByGender, setSearchByGender] = useState("all")
   //Llamada al Fetch
   useEffect(() => {
     callToApi(searchByHouse).then((wizardsData) => {
@@ -24,6 +25,8 @@ const App = () => {
       setSearchWizard(data.value);
     } else if (data.key === 'house') {
       setSearchByHouse(data.value);
+    } else if (data.key === 'gender') {
+      setSearchByGender(data.value)
     }
   };
 
@@ -33,6 +36,17 @@ const App = () => {
     })
     .filter((oneWizard) => {
       return oneWizard.house === searchByHouse;
+    }).
+    filter((oneWizard) => {
+
+
+      // return oneWizard.gender === "all" ? true : oneWizard.gender === searchByGender
+      if (searchByGender === "all") {
+        return true;
+      } else {
+        return oneWizard.gender === searchByGender;
+      }
+
     });
 
   const renderWizardDetail = (props) => {
@@ -55,6 +69,7 @@ const App = () => {
               wizards={wizards}
               searchByHouse={searchByHouse}
               searchWizard={searchWizard}
+              searchByGender={searchByGender}
               filteredWizards={filteredWizards}
             />
             <CharacterList wizards={filteredWizards} />
