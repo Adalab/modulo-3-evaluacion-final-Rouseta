@@ -1,5 +1,8 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
+import FilterStudent from "./FilterStudent";
+import FilterStaff from "./FilterStaff";
+
 import "../styles/components/Filters.scss";
 
 function Filters(props) {
@@ -17,6 +20,9 @@ function Filters(props) {
                     handleInput={props.handleInput}
                     searchByHouse={props.searchbyHouse}
                 />
+                <FilterStudent handleInput={props.handleInput}
+                    searchByStudent={props.searchByStudent} />
+                <FilterStaff handleInput={props.handleInput} searchByStaff={props.searchByStaff} />
             </form>
         </section>
     );

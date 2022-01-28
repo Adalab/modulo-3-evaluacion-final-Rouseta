@@ -16,6 +16,8 @@ const callToApi = (searchByHouse) => {
                     gender: wizard.gender,
                     specie: wizard.species,
                     alternate: wizard.alternate_names,
+                    student: wizard.hogwartsStudent,
+                    staff: wizard.hogwartsStaff,
                     id: uuidv4(),
                 };
             });

@@ -14,6 +14,8 @@ const App = () => {
   const [wizards, setWizards] = useState([]);
   const [searchWizard, setSearchWizard] = useState("");
   const [searchByHouse, setSearchByHouse] = useState("Gryffindor");
+  const [searchByStudent, setSearchByStudent] = useState(false);
+  const [searchByStaff, setSearchByStaff] = useState(false);
   //Llamada al Fetch
   useEffect(() => {
     callToApi(searchByHouse).then((wizardsData) => {
@@ -26,6 +28,10 @@ const App = () => {
       setSearchWizard(data.value);
     } else if (data.key === "house") {
       setSearchByHouse(data.value);
+    } else if (data.key === "student") {
+      setSearchByStudent(data.value);
+    } else if (data.key === "staff") {
+      setSearchByStaff(data.value)
     }
   };
 
@@ -35,7 +41,20 @@ const App = () => {
     })
     .filter((oneWizard) => {
       return oneWizard.house === searchByHouse;
-    });
+    })
+    .filter((oneWizard) => {
+      if (searchByStudent === false) {
+        return true;
+      } else {
+        return oneWizard.student;
+      }
+    }).filter((oneWizard) => {
+      if (searchByStaff === false) {
+        return true
+      } else {
+        return oneWizard.staff
+      }
+    })
 
   const renderWizardDetail = (props) => {
     const routeId = props.match.params.wizardId;
@@ -55,6 +74,8 @@ const App = () => {
               searchByHouse={searchByHouse}
               searchWizard={searchWizard}
               filteredWizards={filteredWizards}
+              searchByStudent={searchByStudent}
+              searchByStaff={searchByStaff}
             />
             <CharacterList wizards={filteredWizards} />
           </div>
