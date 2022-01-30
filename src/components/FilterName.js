@@ -15,7 +15,7 @@ function FilterName(props) {
             </label>
             <input
                 type="text"
-                className="input-boxes_name"
+                className="input-boxes-name"
                 type="text"
                 name="name"
                 id="name"

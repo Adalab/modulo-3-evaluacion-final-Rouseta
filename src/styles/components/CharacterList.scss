@@ -5,7 +5,14 @@
   justify-content: center;
 }
 .result-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  // margin-left: 60px;
+  display: flex;
+  justify-content: column;
+  flex-wrap: wrap;
+}
+
+@media all and (min-width: 768px) {
+  .result-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
