@@ -19,7 +19,10 @@ function Filters(props) {
                 <FilterHouse
                     handleInput={props.handleInput}
                     searchByHouse={props.searchbyHouse}
+
                 />
+                <FilterGender handleInput={props.handleInput} searchByGender=
+                    {props.searchByGender} />
                 <FilterStudent
                     handleInput={props.handleInput}
                     searchByStudent={props.searchByStudent}
@@ -28,8 +31,7 @@ function Filters(props) {
                     handleInput={props.handleInput}
                     searchByStaff={props.searchByStaff}
                 />
-                <FilterGender handleInput={props.handleInput} searchByGender=
-                    {props.searchByGender} />
+
             </form>
         </section>
     );

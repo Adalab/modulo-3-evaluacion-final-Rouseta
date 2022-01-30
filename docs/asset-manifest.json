@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.e7a0d424.css",
-    "main.js": "./static/js/main.3b6c7934.js",
+    "main.css": "./static/css/main.6b87b3cd.css",
+    "main.js": "./static/js/main.973d047c.js",
     "static/media/HPGafas.jpg": "./static/media/HPGafas.f0caeb049e9bc91c585e.jpg",
     "static/media/HARRYP.ttf": "./static/media/HARRYP.a65869c0c1a4b3d4fcfc.ttf",
     "index.html": "./index.html",
-    "main.e7a0d424.css.map": "./static/css/main.e7a0d424.css.map",
-    "main.3b6c7934.js.map": "./static/js/main.3b6c7934.js.map"
+    "main.6b87b3cd.css.map": "./static/css/main.6b87b3cd.css.map",
+    "main.973d047c.js.map": "./static/js/main.973d047c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7a0d424.css",
-    "static/js/main.3b6c7934.js"
+    "static/css/main.6b87b3cd.css",
+    "static/js/main.973d047c.js"
   ]
 }
