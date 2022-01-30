@@ -1,6 +1,9 @@
 function FilterAlphabet(props) {
-    const handleAlphabet = () => {
-        return "hola"
+    const handleAlphabet = (event) => {
+        props.handleInput({
+            key: "alphabet",
+            value: event.currentTarget.checked,
+        })
     }
     return (
         <label htmlFor="alphabet"> Ordena alfabéticamente

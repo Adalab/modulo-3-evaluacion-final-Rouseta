@@ -12,7 +12,7 @@ const App = () => {
   const [searchWizard, setSearchWizard] = useState("");
   const [searchByHouse, setSearchByHouse] = useState("Slytherin");
   const [searchByGender, setSearchByGender] = useState("all")
-  const [filterByAlphabet, setFilterByAlphabe] = useState(false)
+  const [filterByAlphabet, setFilterByAlphabet] = useState(false)
   //Llamada al Fetch
   useEffect(() => {
     callToApi(searchByHouse).then((wizardsData) => {
@@ -28,6 +28,8 @@ const App = () => {
       setSearchByHouse(data.value);
     } else if (data.key === 'gender') {
       setSearchByGender(data.value)
+    } else if (data.key === "alphabet") {
+      setFilterByAlphabet(data.value)
     }
   };
 
