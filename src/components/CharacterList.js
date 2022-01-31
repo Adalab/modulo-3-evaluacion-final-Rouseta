@@ -3,17 +3,9 @@ import CharacterCard from "./CharacterCard";
 import Error from "./Error";
 
 function CharacterList(props) {
-    const wizardSort = props.wizards;
-    wizardSort.sort((a, b) => {
-        if (a.name > b.name) {
-            return 1;
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-    });
 
-    const wizardElement = wizardSort.map((oneWizard) => {
+
+    const wizardElement = props.wizards.map((oneWizard) => {
         return (
             <li key={oneWizard.id} className="result-card">
                 <CharacterCard oneWizard={oneWizard} />
@@ -22,7 +14,7 @@ function CharacterList(props) {
     });
 
     if (props.wizards.length === 0) {
-        return <Error />
+        return <Error />;
     } else {
         return (
             <section className="results">
@@ -32,4 +24,3 @@ function CharacterList(props) {
     }
 }
 export default CharacterList;
-
