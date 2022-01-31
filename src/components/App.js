@@ -30,8 +30,21 @@ const App = () => {
       setSearchByGender(data.value)
     } else if (data.key === "alphabet") {
       setFilterByAlphabet(data.value)
-    }
+    };
   };
+  function sortingWizards() {
+    const wizardsSort = wizards;
+    wizardsSort.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1
+      }
+
+
+    })
+  }
 
   const filteredWizards = wizards
     .filter((oneWizard) => {
@@ -75,6 +88,7 @@ const App = () => {
               searchByGender={searchByGender}
               filteredWizards={filteredWizards}
               filterByAlphabet={filterByAlphabet}
+              sortingWizards={sortingWizards}
             />
             <CharacterList wizards={filteredWizards} />
           </div>
