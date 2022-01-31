@@ -17,6 +17,7 @@ const App = () => {
   const [searchByStudent, setSearchByStudent] = useState(false);
   const [searchByStaff, setSearchByStaff] = useState(false);
   const [searchByGender, setSearchByGender] = useState("all");
+  const [filterByAlphabet, setFilterByAlphabet] = useState(false);
   //Llamada al Fetch
   useEffect(() => {
     callToApi(searchByHouse).then((wizardsData) => {
@@ -35,6 +36,8 @@ const App = () => {
       setSearchByGender(data.value);
     } else if (data.key === "staff") {
       setSearchByStaff(data.value);
+    } else if (data.key === "alphabet") {
+      setFilterByAlphabet(data.value)
     }
   };
 
@@ -65,7 +68,7 @@ const App = () => {
       } else {
         return oneWizard.gender === searchByGender;
       }
-    });
+    }).sort((a, b) => a.name.localCompare(b.name))
 
   const renderWizardDetail = (props) => {
     const routeId = props.match.params.wizardId;

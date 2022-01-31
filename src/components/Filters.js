@@ -3,6 +3,7 @@ import FilterHouse from "./FilterHouse";
 import FilterStudent from "./FilterStudent";
 import FilterStaff from "./FilterStaff";
 import FilterGender from "./FilterGender";
+import FilterAlphabet from "./FilterAlphabet";
 import "../styles/components/Filters.scss";
 
 function Filters(props) {
@@ -19,10 +20,11 @@ function Filters(props) {
                 <FilterHouse
                     handleInput={props.handleInput}
                     searchByHouse={props.searchbyHouse}
-
                 />
-                <FilterGender handleInput={props.handleInput} searchByGender=
-                    {props.searchByGender} />
+                <FilterGender
+                    handleInput={props.handleInput}
+                    searchByGender={props.searchByGender}
+                />
                 <FilterStudent
                     handleInput={props.handleInput}
                     searchByStudent={props.searchByStudent}
@@ -31,7 +33,10 @@ function Filters(props) {
                     handleInput={props.handleInput}
                     searchByStaff={props.searchByStaff}
                 />
-
+                <FilterAlphabet
+                    handleInput={props.handleInput}
+                    filterByAlphabet={props.filterByAlphabet}
+                />
             </form>
         </section>
     );

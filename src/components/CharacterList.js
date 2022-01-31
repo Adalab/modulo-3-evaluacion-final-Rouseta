@@ -22,7 +22,7 @@ function CharacterList(props) {
     });
 
     if (props.wizards.length === 0) {
-        return <Error />;
+        return <Error />
     } else {
         return (
             <section className="results">
@@ -32,3 +32,4 @@ function CharacterList(props) {
     }
 }
 export default CharacterList;
+
