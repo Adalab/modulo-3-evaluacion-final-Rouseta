@@ -68,24 +68,18 @@ const App = () => {
       } else {
         return oneWizard.gender === searchByGender;
       }
-    }).filter((oneWizard) => {
-      if (filterByAlphabet === false) {
-        return true
-      } else {
+    }).sort((a, b) => {
+      if (filterByAlphabet === true) {
 
-        return wizards.sort((a, b) => {
-          if (a.name > b.name) {
-            return 1;
-          }
-          if (a.name < b.name) {
-            return -1;
-          }
-        });
-
-
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
       }
+    });
 
-    })
 
   const renderWizardDetail = (props) => {
     const routeId = props.match.params.wizardId;
