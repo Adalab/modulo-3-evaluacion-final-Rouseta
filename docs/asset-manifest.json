@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.45225b65.css",
+    "main.js": "./static/js/main.b6e95053.js",
+    "static/media/HPGafas.jpg": "./static/media/HPGafas.f0caeb049e9bc91c585e.jpg",
+    "static/media/HARRYP.ttf": "./static/media/HARRYP.a65869c0c1a4b3d4fcfc.ttf",
+    "index.html": "./index.html",
+    "main.45225b65.css.map": "./static/css/main.45225b65.css.map",
+    "main.b6e95053.js.map": "./static/js/main.b6e95053.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45225b65.css",
+    "static/js/main.b6e95053.js"
+  ]
+}
